@@ -9,7 +9,7 @@ COPY . .
 COPY .env ./
 
 # Install dependencies
-RUN apt-get update && apt-get install -y cmake libcurl4-openssl-dev
+RUN apt-get update && apt-get install -y cmake 
 
 # Build the project
 RUN mkdir build && cd build && cmake .. && make
