@@ -1,6 +1,10 @@
 # weather-cpp
 A weather app to help you get a quick insight of the weather around you
 
+## Get the API Key
+
+Create an account and get an API key from [weatherbit](https://www.weatherbit.io/).
+
 ## Install dependencies
 
 - [json](https://github.com/nlohmann/json?tab=readme-ov-file)
@@ -14,6 +18,7 @@ docker compose up
 
 ### How to call the API
 
+here are examples of how to call to the API:
 `curl "http://localhost:8080/weather/current?location=Lyon"`
 `curl "http://localhost:8080/weather/forecast?location=Lyon"`
 
