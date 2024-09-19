@@ -1,6 +1,12 @@
 # weather-cpp
 A weather app to help you get a quick insight of the weather around you
 
+## Install dependencies
+
+- [json](https://github.com/nlohmann/json?tab=readme-ov-file)
+- [httplib](https://github.com/yhirose/cpp-httplib/tree/master)
+- [googletest](https://github.com/google/googletest/tree/main)
+
 ## Run the app
 
 docker compose build

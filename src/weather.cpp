@@ -221,6 +221,8 @@ namespace weather {
             weatherbitResponse["data"][0]["rh"]
         };
 
+        res.status = 200;
+
         res.set_content(nlohmann::json(response).dump(), "application/json");
     }
 
@@ -250,7 +252,8 @@ namespace weather {
         }
 
         ForecastResponse forecastResponse = writeForecastResponse(weatherbitResponse);
-
+        
+        res.status = 200;
         res.set_content(nlohmann::json(forecastResponse).dump(), "application/json");
     }
 }

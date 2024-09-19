@@ -34,3 +34,9 @@
 
 # build folders
 */build/*
+
+# Dependencies
+*/cpp-httplib/*
+*/googletest/*
+*/json/*
+
