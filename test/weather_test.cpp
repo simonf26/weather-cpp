@@ -4,9 +4,12 @@
 #include <string>
 #include "../include/weather.hpp"
 
+// Fill in the apiKey before testing
+// Todo: get the API key from the env file.
+const std::string apiKey="";
+
 // Testing weatherbit current
 TEST(GetWeatherBitCurrent, Success) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string city = "Paris";
 
     httplib::Client client("api.weatherbit.io");
@@ -20,7 +23,6 @@ TEST(GetWeatherBitCurrent, Success) {
 }
 
 TEST(GetWeatherBitCurrent, NonExistentCity) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string nonExistentCity = "NonExistentCity";
 
     httplib::Client client("api.weatherbit.io");
@@ -35,7 +37,6 @@ TEST(GetWeatherBitCurrent, NonExistentCity) {
 }
 
 TEST(GetWeatherBitCurrent, SpecialCharacters) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string specialCharacterCity = "Cañon";
 
     httplib::Client client("api.weatherbit.io");
@@ -49,7 +50,6 @@ TEST(GetWeatherBitCurrent, SpecialCharacters) {
 }
 
 TEST(GetWeatherBitCurrent, Lowercase) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string lowercaseCity = "amiens";
 
     httplib::Client client("api.weatherbit.io");
@@ -63,7 +63,6 @@ TEST(GetWeatherBitCurrent, Lowercase) {
 }
 
 TEST(GetWeatherBitCurrent, Uppercase) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string uppercaseCity = "BRUXELLES";
 
     httplib::Client client("api.weatherbit.io");
@@ -79,7 +78,6 @@ TEST(GetWeatherBitCurrent, Uppercase) {
 // Weatherbit forecast
 
 TEST(GetWeatherBitForecast, Success) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string city = "Paris";
 
     httplib::Client client("api.weatherbit.io");
@@ -93,7 +91,6 @@ TEST(GetWeatherBitForecast, Success) {
 }
 
 TEST(GetWeatherBitForecast, NonExistentCity) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string nonExistentCity = "NonExistentCity";
 
     httplib::Client client("api.weatherbit.io");
@@ -108,7 +105,6 @@ TEST(GetWeatherBitForecast, NonExistentCity) {
 }
 
 TEST(GetWeatherBitForecast, SpecialCharacters) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string specialCharacterCity = "Cañon";
 
     httplib::Client client("api.weatherbit.io");
@@ -122,7 +118,6 @@ TEST(GetWeatherBitForecast, SpecialCharacters) {
 }
 
 TEST(GetWeatherBitForecast, Lowercase) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string lowercaseCity = "amiens";
 
     httplib::Client client("api.weatherbit.io");
@@ -136,7 +131,6 @@ TEST(GetWeatherBitForecast, Lowercase) {
 }
 
 TEST(GetWeatherBitForecast, Uppercase) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string uppercaseCity = "BRUXELLES";
 
     httplib::Client client("api.weatherbit.io");
@@ -152,7 +146,6 @@ TEST(GetWeatherBitForecast, Uppercase) {
 // Test global API
 
 TEST(GetCurrentWeather, Success) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string city = "Lyon";
 
     // Set environment variable
@@ -186,7 +179,6 @@ TEST(GetCurrentWeather, Success) {
 }
 
 TEST(GetCurrentWeather, NonExistentCity) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string city = "NonExistentCity";
 
     // Set environment variable
@@ -220,7 +212,6 @@ TEST(GetCurrentWeather, NonExistentCity) {
 }
 
 TEST(GetForecast, Success) {
-    std::string apiKey = "01a910b1b73645568da095ec46a05080";
     std::string city = "Lyon";
 
     // Set environment variable

@@ -5,6 +5,8 @@ A weather app to help you get a quick insight of the weather around you
 
 Create an account and get an API key from [weatherbit](https://www.weatherbit.io/).
 
+Fill in the .env file using the .env.template file.
+
 ## Install dependencies
 
 - [json](https://github.com/nlohmann/json?tab=readme-ov-file)
