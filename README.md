@@ -13,19 +13,24 @@ Create an account and get an API key from [weatherbit](https://www.weatherbit.io
 
 ## Run the app
 
+```
 docker compose build
 docker compose up
+```
 
 ### How to call the API
 
 here are examples of how to call to the API:
 `curl "http://localhost:8080/weather/current?location=Lyon"`
+
 `curl "http://localhost:8080/weather/forecast?location=Lyon"`
 
 ## Run the tests
 
-`cd test`
-`cmake -S . -B build`
-`cmake --build build`
-`cd build && ctest`
+```
+cd test
+cmake -S . -B build
+cmake --build build
+cd build && ctest
+```
 
